@@ -1,0 +1,49 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    background: grey;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: red;
+    width: 100%;
+}
+
+.panier {
+    height: 120px;
+    width: 120px;
+    background: green;
+}
+
+li {
+    display: inline;
+    padding: 100px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: grey;
+    width: 100%;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: lightcoral;
+    text-align: center;
+}

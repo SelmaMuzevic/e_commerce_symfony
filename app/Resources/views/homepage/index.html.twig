@@ -1,76 +1,37 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block body %}
-    <section class="header">
-        <nav class="menu">
-            <ul>
-                <li>S'inscrire</li>
-                <li>Connexion</li>
-                <li>Rechercher par categorie</li>
-            </ul>
-        </nav>
+    {% block body %}
+        
+        <h1>Selma's Market Place</h1>
+        
+<section class="nav">
+    <section class="panier">
+        <h3>Panier</h3>
     </section>
 
-<main>
-
-    <h1>Selma's Market Place</h1>
-        <h3>Panier</h3>
+    <section class="panier">
         <h3>Favori</h3>
-
-<section class="categorie-vetements">
-    <h2>Vetements</h2>
-    <img src="vetements.jpg" alt="vetements" height="130px" width="130px">
+    </section>
 </section>
 
-<section class="categorie-chaussures">
-    <h2>Chaussures</h2>
-    <img src="chaussures.jpg" alt="chaussures" height="130px" width="130px">
-</section>
+    <section class="categorie-vetements">
+        <h2>Vetements</h2>
+        <img src="{{ asset('Images/vetements.jpg') }}" alt="vetements" height="300px" width="300px">
+    </section>
 
-<section class="categorie-jouets">
-    <h2>Jouets</h2>
-    <img src="jouets.jpg" alt="jouets" height="130px" width="130px">
-</section>
+    <section class="categorie-chaussures">
+        <h2>Chaussures</h2>
+        <img src="{{ asset('Images/chaussures.jpg') }}" alt="chaussures" height="300px" width="300px">
+    </section>
 
-<section class="categorie-electro-multimedia">
-    <h2>Electro et Multimédia</h2>
-    <img src="electro-multimedia.jpg" alt="electromultimedia" height="130px" width="130px">
-</section>
+    <section class="categorie-jouets">
+        <h2>Jouets</h2>
+        <img src="{{ asset('Images/jouets.jpg') }}" alt="jouets" height="300px" width="300px">
+    </section>
 
-</main>
+    <section class="categorie-electro-multimedia">
+        <h2>Electro et Multimédia</h2>
+        <img src="{{ asset('Images/electro-multimedia.jpg') }}" alt="electromultimedia" height="300px" width="300px">
+    </section>
 
-
-<footer>
-    <p> Contact: </p>
-    <a href="muzevicselma34@gmail.com">muzevicselma34@gmail.com</a>
-    <a href="https://linkedin.com/in/selma-muzevic/">LinkedIN</a>
-    <a href="https://github.com/SelmaMuzevic/">GitHub</a>
-</footer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% endblock %}
+    {% endblock %}

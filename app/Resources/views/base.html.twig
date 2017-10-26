@@ -3,11 +3,35 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+
+        <link rel="stylesheet" href="{{ asset('CSS/main.css') }}" />
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <section class="header">
+            <nav class="menu">
+                <ul>
+                    <li>S'inscrire</li>
+                    <li>Connexion</li>
+                    <li>Rechercher</li>
+                </ul>
+            </nav>
+        </section>
+        <main>  
+        {% block body %}
+        
+        {% endblock %}
+        </main>
+
+        <footer>
+            <p> Contact: </p>
+            <a href="muzevicselma34@gmail.com">muzevicselma34@gmail.com</a>
+            <a href="https://linkedin.com/in/selma-muzevic/">LinkedIN</a>
+            <a href="https://github.com/SelmaMuzevic/">GitHub</a>
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
