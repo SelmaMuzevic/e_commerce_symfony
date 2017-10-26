@@ -1,2 +1,4 @@
-# e_commerce_symfony
-Site de vente e-commerce, fait avec symfony
+e_commerce_symfony
+==================
+
+A Symfony project created on October 26, 2017, 10:03 am.
