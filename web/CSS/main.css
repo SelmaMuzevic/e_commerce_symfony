@@ -5,38 +5,61 @@ h1 {
 
 body {
     margin: 0;
-    background: grey;
+    background: lightgrey;
 }
 
 .menu {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 2em;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .nav {
     display: flex;
-    justify-content: space-around;
-    background: red;
+    justify-content: space-between;
+    background: violet;
     width: 100%;
 }
 
 .panier {
     height: 120px;
-    width: 120px;
-    background: green;
+    width: 300px;
+    background: lightblue;
+    margin-left: 3em;
+    margin-right: 3em;
+    text-align: center;
+    padding: 2em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 li {
-    display: inline;
-    padding: 100px;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: blueviolet;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: grey;
+    background: lightgrey;
     width: 100%;
     margin: 0;
 }
