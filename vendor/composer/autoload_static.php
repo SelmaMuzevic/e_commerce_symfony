@@ -43,7 +43,6 @@ class ComposerStaticInita5bcee1bcb73c6aab7af8d40b594102b
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sensio\\Bundle\\DistributionBundle\\' => 33,
-            'SelmaSessionsBundle\\' => 20,
         ),
         'P' => 
         array (
@@ -159,10 +158,6 @@ class ComposerStaticInita5bcee1bcb73c6aab7af8d40b594102b
         'Sensio\\Bundle\\DistributionBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/distribution-bundle',
-        ),
-        'SelmaSessionsBundle\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/SelmaBundle',
         ),
         'Psr\\SimpleCache\\' => 
         array (
