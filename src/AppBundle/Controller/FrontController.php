@@ -13,7 +13,7 @@ class FrontController extends Controller
      */
     public function indexAction(Request $request)
     {
-            
+        // ici je mettrai les routes pour aller chercher la liste des produits(categories)
 
         // replace this example code with whatever you need
         return $this->render('homepage/index.html.twig', [
