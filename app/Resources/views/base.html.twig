@@ -4,8 +4,9 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('CSS/main.css') }}" />
+        
 
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -14,9 +15,9 @@
         <section class="header">
             <nav class="menu">
                 <ul>
-                    <li style="float:right"><a class="active" href="#S'inscrire">S'inscrire</a></li>
-                    <li style="float:right"><a class="active" href="#Connexion">Connexion</a></li>
-                    <li style="float:right"><a class="active" href="#Rechercher">Rechercher</li>
+                    <li style="float:right"><a class="active" href="/register">S'inscrire</a></li>
+                    <li style="float:right"><a class="active" href="/login">Connexion</a></li>
+                    <li style="float:right"><a class="active" href="Rechercher">Rechercher</a></li>
                 </ul>
 
             </nav>
@@ -33,6 +34,8 @@
             <a href="https://linkedin.com/in/selma-muzevic/">LinkedIN</a>
             <a href="https://github.com/SelmaMuzevic/">GitHub</a>
         </footer>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        {% endblock %}
     </body>
 </html>

@@ -55,7 +55,6 @@ class User extends BaseUser {
      */
     private $prenom;
 
-
     /**
      * Set nom
      *
