@@ -2,60 +2,105 @@
 
 namespace AppBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
  *
- * @ORM\Table(name="user")
+ * @ORM\Table(name="fos_user")
  * @ORM\Entity
  */
-class User
-{
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom", type="string", length=255, nullable=false)
+
+class User extends BaseUser {
+
+     /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $nom;
+    protected $id;
+
+    public function __construct()
+    {
+        parent::__construct();
+        
+    }
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255)
      *
-     * @ORM\Column(name="prenom", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\Length(
+     *     min=3,
+     *     max=255,
+     *     minMessage="The name is too short.",
+     *     maxMessage="The name is too long.",
+     *     groups={"Registration", "Profile"}
+     * )
+     */
+    private $nom;
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\Length(
+     *     min=3,
+     *     max=255,
+     *     minMessage="The name is too short.",
+     *     maxMessage="The name is too long.",
+     *     groups={"Registration", "Profile"}
+     * )
      */
     private $prenom;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="pseudo", type="string", length=255, nullable=false)
-     */
-    private $pseudo;
 
     /**
-     * @var string
+     * Set nom
      *
-     * @ORM\Column(name="mail", type="string", length=255, nullable=false)
+     * @param string $nom
+     *
+     * @return User
      */
-    private $mail;
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
 
     /**
-     * @var string
+     * Get nom
      *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     * @return string
      */
-    private $password;
+    public function getNom()
+    {
+        return $this->nom;
+    }
 
     /**
-     * @var integer
+     * Set prenom
      *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @param string $prenom
+     *
+     * @return User
      */
-    private $id;
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
 
+        return $this;
+    }
 
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
 }
-

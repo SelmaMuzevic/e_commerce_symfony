@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Profil</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ profil.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ profil.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Commande</th>
+                <td>{{ profil.commande }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if profil.date %}{{ profil.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ profil.description }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('profil_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('profil_edit', { 'id': profil.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
