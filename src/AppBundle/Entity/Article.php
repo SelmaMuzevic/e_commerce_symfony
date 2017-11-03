@@ -132,7 +132,7 @@ class Article {
      *
      * @param string $photo
      */
-    public function setPhoto()
+    public function setPhoto($photo)
     {
         $this->photo = $photo;
 

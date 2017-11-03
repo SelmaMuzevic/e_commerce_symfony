@@ -5,30 +5,46 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 use AppBundle\Entity\Category;
 use AppBundle\Entity\Article;
-
-use Symfony\Component\HttpFoundation\Response;
 
 
 class FrontController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+    * @Route("/", name="homepage")
+    */
+    public function indexAction(Request $request){
+        // function findAll() qui recupere tout les données de category (articles)
+        // et affiche
+        $repository = $this->getDoctrine()
+                            ->getManager()
+                            ->getRepository('AppBundle:Category');
+
+        $categories = $repository->findAll();
+
+        return $this->render('homepage/index.html.twig', array(
+            "categories" => $categories
+        ));
+        
+    }
+    /**
+     * @Route("/new-article", name="create-article")
      */
     public function createArticleAction(Request $request)
     {
         // ici je mettrai les routes pour aller chercher la liste des produits(categories)
         
-        $category = new Category();
-        $category->setName('Vetements');
+        // $category = new Category();
+        // $category->setName('Vetements');
 
-        $article = new Article();
-        $article->setNom('Pantalons');
-        $article->setPrix(19.99);
-        $article->setPhoto();
-        $article->setDescription('Ergonomic and stylish!');
+        // $article = new Article();
+        // $article->setNom('Pantalons');
+        // $article->setPrix(19.99);
+        // $article->setPhoto('kjnknj');
+        // $article->setDescription('Ergonomic and stylish!');
 
         // relate this product to the category
         $article->setCategory($category);

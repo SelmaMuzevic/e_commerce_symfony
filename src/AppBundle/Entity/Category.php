@@ -30,6 +30,14 @@ class Category
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string", length=255)
+     */
+    private $photo;
+
+
+    /**
     * @ORM\OneToMany(targetEntity="Article", mappedBy="category")
     */
     private $articles;
@@ -73,5 +81,29 @@ class Category
     {
         return $this->name;
     }
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     *
+     * @return Category
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+    
 }
 

@@ -14,7 +14,17 @@
     </section>
 </section>
 
+
+
+  {% for cat in categories %}
     <section class="categorie-vetements">
+        <h2>{{ cat.name }}</h2>
+        <img src="{{ asset(cat.photo) }}" alt="{{ cat.name }}" height="300px" width="300px">
+    </section>
+  {% endfor %}
+
+
+    {#<section class="categorie-vetements">
         <h2>Vetements</h2>
         <img src="{{ asset('Images/vetements.jpg') }}" alt="vetements" height="300px" width="300px">
     </section>
@@ -32,6 +42,6 @@
     <section class="categorie-electro-multimedia">
         <h2>Electro et Multimédia</h2>
         <img src="{{ asset('Images/electro-multimedia.jpg') }}" alt="electromultimedia" height="300px" width="300px">
-    </section>
+    </section>#}
 
     {% endblock %}
