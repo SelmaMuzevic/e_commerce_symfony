@@ -17,6 +17,7 @@
     <section class="categorie-vetements">
         <h2>{{ cat.name }}</h2>
         <img src="{{ asset(cat.photo) }}" alt="{{ cat.name }}" height="300px" width="300px">
+        <a href="{{ path('article_by_category', {"nameCategory": cat.name }) }}">Accéder</a>
     </section>
   {% endfor %}
 

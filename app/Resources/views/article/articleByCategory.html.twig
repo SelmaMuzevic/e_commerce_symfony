@@ -3,18 +3,6 @@
 {% block body %}
     <h1>Articles list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Prix</th>
-                <th>Photo</th>
-                <th>Description</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for article in articles %}
             <tr>
                 <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.nom }}</a></td>
@@ -22,21 +10,9 @@
                 <td>{{ article.photo }}</td>
                 <td>{{ article.description }}</td>
                 <td>{{ article.id }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('article_show', { 'id': article.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
             </tr>
         {% endfor %}
-        </tbody>
-    </table>
-
+     
     <ul>
         <li>
             <a href="{{ path('article_new') }}">Create a new article</a>

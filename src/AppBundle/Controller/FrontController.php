@@ -14,7 +14,7 @@ use AppBundle\Entity\Article;
 class FrontController extends Controller
 {
     /**
-    * @Route("/categorie/{nameCategory}" , name ="vetements")
+    * @Route("/categorie/{nameCategory}" , name ="article_by_category")
     */
     public function showArticleAction($nameCategory) {
         $category = $this->getDoctrine()
@@ -24,7 +24,7 @@ class FrontController extends Controller
         $articles = $category->getArticles();
 
         return $this->render('article/articleByCategory.html.twig', array(
-            "articles" => '$articles'
+            "articles" => $articles
         ));
 
      }
