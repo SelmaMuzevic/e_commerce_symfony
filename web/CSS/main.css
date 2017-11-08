@@ -5,6 +5,11 @@ p {
     text-align: center;
 }
 
+h2 {
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -20,8 +25,6 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    background: violet;
-    width: 100%;
 }
 
 .fos_user_registration_register {
@@ -53,11 +56,8 @@ body {
 
 .panier {
     height: 120px;
-    width: 300px;
-    background: lightblue;
+    box-shadow: 5px 5px 5px black;
     border-radius: 60px;
-    margin-left: 3em;
-    margin-right: 3em;
     text-align: center;
     padding: 2em;
 }

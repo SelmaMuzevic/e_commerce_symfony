@@ -3,6 +3,24 @@
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     <p>Not a member yet ?</p>
     <h2>Join !</h2>
+    {{ form_label(form.nom) }}
+    {{ form_widget(form.nom) }}
+
+    {{ form_label(form.prenom) }}
+    {{ form_widget(form.prenom) }}
+
+    {{ form_label(form.email) }}
+    {{ form_widget(form.email) }}
+
+    {{ form_label(form.username) }}
+    {{ form_widget(form.username) }}
+
+    {{ form_label(form.plainPassword.first) }}
+    {{ form_widget(form.plainPassword.first) }}
+
+    {{ form_label(form.plainPassword.second) }}
+    {{ form_widget(form.plainPassword.second) }}
+
     {{ form_widget(form) }}
      
     <div>

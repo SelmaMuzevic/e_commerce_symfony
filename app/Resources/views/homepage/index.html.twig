@@ -1,9 +1,6 @@
     {% extends 'base.html.twig' %}
 
     {% block body %}
-        
-        <h1>Selma's Market Place</h1>
-        
 <section class="nav">
     <section class="panier">
         <h3>Panier</h3>
@@ -13,8 +10,8 @@
         <h3>Favori</h3>
     </section>
 </section>
-
-
+        
+        <h1>Selma's Market Place</h1>
 
   {% for cat in categories %}
     <section class="categorie-vetements">
@@ -22,26 +19,5 @@
         <img src="{{ asset(cat.photo) }}" alt="{{ cat.name }}" height="300px" width="300px">
     </section>
   {% endfor %}
-
-
-    {#<section class="categorie-vetements">
-        <h2>Vetements</h2>
-        <img src="{{ asset('Images/vetements.jpg') }}" alt="vetements" height="300px" width="300px">
-    </section>
-
-    <section class="categorie-chaussures">
-        <h2>Chaussures</h2>
-        <img src="{{ asset('Images/chaussures.jpg') }}" alt="chaussures" height="300px" width="300px">
-    </section>
-
-    <section class="categorie-jouets">
-        <h2>Jouets</h2>
-        <img src="{{ asset('Images/jouets.jpg') }}" alt="jouets" height="300px" width="300px">
-    </section>
-
-    <section class="categorie-electro-multimedia">
-        <h2>Electro et Multimédia</h2>
-        <img src="{{ asset('Images/electro-multimedia.jpg') }}" alt="electromultimedia" height="300px" width="300px">
-    </section>#}
 
     {% endblock %}

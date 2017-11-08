@@ -81,6 +81,7 @@ class Category
     {
         return $this->name;
     }
+
     /**
      * Set photo
      *
@@ -103,6 +104,31 @@ class Category
     public function getPhoto()
     {
         return $this->photo;
+    }
+
+
+     /**
+     * Set articles
+     *
+     * @param string $articles
+     *
+     * @return Category
+     */
+    public function setArticles($articles)
+    {
+        $this->articles = $articles;
+
+        return $this;
+    }
+
+    /**
+     * Get articles
+     *
+     * @return string
+     */
+    public function getArticles()
+    {
+        return $this->articles;
     }
     
 }

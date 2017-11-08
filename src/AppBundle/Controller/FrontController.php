@@ -14,6 +14,22 @@ use AppBundle\Entity\Article;
 class FrontController extends Controller
 {
     /**
+    * @Route("/categorie/{nameCategory}" , name ="vetements")
+    */
+    public function showArticleAction($nameCategory) {
+        $category = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->findOneByName($nameCategory);
+
+        $articles = $category->getArticles();
+
+        return $this->render('article/articleByCategory.html.twig', array(
+            "articles" => '$articles'
+        ));
+
+     }
+
+    /**
     * @Route("/", name="homepage")
     */
     public function indexAction(Request $request){
@@ -70,13 +86,4 @@ class FrontController extends Controller
 
 }
 
-public function showArticleAction($categoryId)
-{
-     $category = $this->getDoctrine()
-        ->getRepository(Category::class)
-        ->find($categoryId);
-
-    $articles = $category->getArticles();
-
-     }
 }
