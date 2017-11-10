@@ -1,7 +1,6 @@
     {% extends 'base.html.twig' %}
 
     {% block body %}
-<section class="nav">
     <section class="panier">
         <h3>Panier</h3>
     </section>
@@ -9,15 +8,14 @@
     <section class="panier">
         <h3>Favori</h3>
     </section>
-</section>
         
         <h1>Selma's Market Place</h1>
 
   {% for cat in categories %}
     <section class="categorie-vetements">
-        <h2>{{ cat.name }}</h2>
-        <img src="{{ asset(cat.photo) }}" alt="{{ cat.name }}" height="300px" width="300px">
         <a href="{{ path('article_by_category', {"nameCategory": cat.name }) }}">Accéder</a>
+        <h2>{{ cat.name }}</h2>
+        <img src="{{ asset(cat.photo) }}" alt="{{ cat.name }}" height="350px" width="350px">
     </section>
   {% endfor %}
 

@@ -14,16 +14,26 @@
     </head>
     <body>
         <section class="header">
-            <nav class="menu">
-                <ul>
-                    <li><a class="active" href="/register">S'inscrire</a></li>
-                    <li><a class="active" href="/login">Connexion</a></li>
-                    <li><a class="active" href="Rechercher">Rechercher</a></li>
-                </ul>
+        <nav class="navbar navbar-default">
+        <div class="container">
+        <nav class="menu">
 
-            </nav>
+        <ul class="nav">
+            <li><a class="btn btn-outline-dark" href="/register">S'inscrire</a></li>
+            <li><a class="btn btn-outline-dark" href="/login">Connexion</a></li>
+
+            <div class="recherche_p">
+                <form action="/search" class="form-inline" id="search">
+                    <input class="form-control mr-sm-2" id="search" name="q" type="text" placeholder="Rechercher" />
+                    <input id="search-btn" class="btn btn-outline-dark" type="submit" value="Rechercher" />
+                </form>
+            </div>
+
+        </ul>
+        </nav>
+
         </section>
-        <main>  
+    <main>  
         {% block body %}
         
         {% endblock %}
